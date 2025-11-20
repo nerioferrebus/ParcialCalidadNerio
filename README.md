@@ -1,0 +1,3 @@
+El pipeline se ejecuta solo cada vez que yo subo algo al repositorio. GitHub Actions ve el cambio y empieza a correr los pasos que tengo en el archivo ci.yml. Lo que hace básicamente es descargar mi proyecto, instalar Java y luego correr el comando mvn clean verify.
+Ese comando revisa todo: compila el código, corre las pruebas, revisa la cobertura y también verifica el estilo. Si algo falla, el pipeline marca error y sale en rojo. Si todo está bien, termina en verde y significa que el proyecto está funcionando correctamente.
+También puedo correr el mismo pipeline en mi computador usando act push sin tener que subir nada a GitHub.
